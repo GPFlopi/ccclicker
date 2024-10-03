@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import CC from '/CC.svg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -7,11 +8,11 @@ function App() {
   return (
     <>
       <div>
-          <img  src="src/assets/CC.png" className="logo react" alt="React logo"
+          <img src={CC} className="logo react" alt="CC"
                 onClick={() => setCount((count) => count + 1)}
           />
       </div>
-      <h1>CCCount {count}</h1>
+      <h1>CCCount is {count}</h1>
     </>
   )
 }
