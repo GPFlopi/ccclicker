@@ -3,7 +3,7 @@ import './App.css'
 import CC from '/CC.svg'
 // import fetch from 'node-fetch';
 
-const SERVER = "http://127.0.0.1:8000"
+const SERVER = "https://ccclickercounter.onrender.com"
 
 function App() {
   const [count, setCount] = useState(0)
