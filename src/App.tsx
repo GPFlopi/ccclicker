@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0)
 
     async function Count() {
-        const response = await fetch(SERVER+'/counter/count/');
+        const response = await fetch(SERVER);
         setCount(Number(await response.text()));
     }
     Count()
