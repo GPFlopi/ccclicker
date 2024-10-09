@@ -19,8 +19,8 @@ function App() {
       <div>
           <img src={CC} className="logo react" alt="CC"
                 onClick={async () => {
-                    await fetch(SERVER+'/counter/inc/')
-                    const response = await fetch(SERVER+'/counter/count/');
+                    await fetch(SERVER+'/inc/')
+                    const response = await fetch(SERVER);
                     setCount(Number(await response.text()));
                     }
                 }
