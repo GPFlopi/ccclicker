@@ -15,7 +15,7 @@ interface ImageData {
 
 function App() {
   const [count, setCount] = useState(0)
-    const [click_button_img, setClick_button_img] = useState("ccclicker/button/CC_huh.png")
+    const [click_button_img, setClick_button_img] = useState("button/CC_huh.png")
 
     const [images, setImages] = useState<ImageData[]>([]);
 
@@ -31,8 +31,6 @@ function App() {
         const randomLeft = Math.floor(Math.random() * window.innerWidth);
         const randomHeight = Math.random() * (100 - 10) + 10
         const randomWidth = Math.random() * (100 - 10) + 10
-
-
         const newImage = {
             id: Date.now(), // Use a timestamp as a unique ID
             top: randomTop,
@@ -53,9 +51,9 @@ function App() {
     return (
     <>
         <ButtonGroup variant='text' arial-label='Medium-sized button group'>
-            <Button onClick={() => setClick_button_img("ccclicker/button/CC_huh.png")}>Huh</Button>
-            <Button onClick={() => setClick_button_img("ccclicker/button/CC_think.png")}>Think</Button>
-            <Button onClick={() => setClick_button_img("ccclicker/button/CC_flirt.png")}>Flirt</Button>
+            <Button onClick={() => setClick_button_img("button/CC_huh.png")}>Huh</Button>
+            <Button onClick={() => setClick_button_img("button/CC_think.png")}>Think</Button>
+            <Button onClick={() => setClick_button_img("button/CC_flirt.png")}>Flirt</Button>
         </ButtonGroup>
       <div>
           <img src={click_button_img} className="logo react" alt="CC"
@@ -72,7 +70,7 @@ function App() {
           {images.map(image => (
               <img
                   key={image.id}
-                  src="ccclicker/minion/otomo.png"
+                  src="minion/otomo.png"
                   alt="Random"
                   style={{
                       position: 'absolute',
