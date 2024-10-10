@@ -41,6 +41,8 @@ function App() {
             height: randomHeight,
         };
 
+        console.log("spawning minion")
+
         setImages(prevImages => [...prevImages, newImage]);
 
         setTimeout(() => {
