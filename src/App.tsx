@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import CC from '/CC.svg'
-// import fetch from 'node-fetch';
-
+import {Button, ButtonGroup} from "@mui/material";
 const SERVER = "https://ccclickercounter.onrender.com"
 
 function App() {
   const [count, setCount] = useState(0)
+    const [click_button_img, setClick_button_img] = useState("ccclicker/CC_huh.png")
 
     async function Count() {
         const response = await fetch(SERVER);
@@ -16,8 +15,13 @@ function App() {
 
     return (
     <>
+        <ButtonGroup variant='text' arial-label='Medium-sized button group'>
+            <Button onClick={() => setClick_button_img("ccclicker/CC_huh.png")}>Huh</Button>
+            <Button onClick={() => setClick_button_img("ccclicker/CC_think.png")}>Think</Button>
+            <Button onClick={() => setClick_button_img("ccclicker/CC_flirt.png")}>Flirt</Button>
+        </ButtonGroup>
       <div>
-          <img src={CC} className="logo react" alt="CC"
+          <img src={click_button_img} className="logo react" alt="CC"
                 onClick={async () => {
                     await fetch(SERVER+'/inc/')
                     const response = await fetch(SERVER);
@@ -30,6 +34,8 @@ function App() {
     </>
   )
 }
+
+
 
 
 
